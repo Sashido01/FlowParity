@@ -1,0 +1,17 @@
+name: Feature request
+description: Suggest one bounded and measurable improvement.
+title: "feature: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Proposed behavior and acceptance criterion
+    validations:
+      required: true

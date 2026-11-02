@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "project": "DEMO ONLY: synthetic CSV export",
+  "reference": {"label": "Synthetic internal specification", "basis": "owned", "notes": "Fictional fixture, not a real released product."},
+  "sources": [
+    {"id": "SRC-001", "kind": "owned", "locator": "examples/demo-spec.md", "observed_on": "2026-11-02"}
+  ],
+  "features": [
+    {"id": "FEAT-001", "title": "Create CSV output from fixture rows", "priority": "must", "status": "verified", "source_ids": ["SRC-001"], "evidence_ids": ["EV-001"], "notes": "Synthetic test data only."},
+    {"id": "FEAT-002", "title": "Optional custom columns", "priority": "should", "status": "planned", "source_ids": ["SRC-001"], "evidence_ids": [], "notes": "Not implemented."}
+  ],
+  "flows": [
+    {"id": "FLOW-001", "title": "Export fixture rows", "feature_ids": ["FEAT-001"], "steps": ["Read synthetic rows", "Write CSV text"], "expected": "A CSV header and one record are returned", "test_ids": ["TEST-001"]}
+  ],
+  "tests": [
+    {"id": "TEST-001", "flow_id": "FLOW-001", "status": "passed", "evidence_ids": ["EV-001"]}
+  ],
+  "evidence": [
+    {"id": "EV-001", "kind": "test", "locator": "tests/test_flow_parity.py::test_fixture_csv", "summary": "Synthetic CSV acceptance test only"}
+  ],
+  "review": {"approved_for_release": true, "security_review": "passed", "license_review": "passed"}
+}

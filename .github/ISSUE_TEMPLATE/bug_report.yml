@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible defect in FlowParity, without private target data.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include credentials, copied proprietary app assets, private URLs, or personal data."
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction and expected/actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Operating system and Python/Codex version
+    validations:
+      required: true

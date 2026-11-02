@@ -1,0 +1,4 @@
+interface:
+  display_name: "FlowParity"
+  short_description: "Evidence-based functional app reconstruction"
+  default_prompt: "Use $flow-parity to study permitted UX behavior and test the local implementation."
