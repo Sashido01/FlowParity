@@ -228,6 +228,8 @@ def _is_link_or_reparse_point(path: Path) -> bool:
     try:
         if path.is_symlink():
             return True
+        if os.name != "nt":
+            return False
         attributes = path.lstat().st_file_attributes
     except (FileNotFoundError, NotADirectoryError):
         return False
